@@ -1,0 +1,23 @@
+{
+  "name": "Girl Frontmaniac",
+  "description": "Likes to eat people's hearts",
+  "image": "ipfs://QmSNoKfKiLXncJhTHeEmGqwEqyz7xqXns3ETKBBvpXmrZL/0.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Yellow"
+    },
+    {
+      "trait_type": "Hair",
+      "value": "Turqoise"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Pink"
+    },
+    {
+      "trait_type": "Accessory",
+      "value": "Little Grey Dress"
+    }
+  ]
+}

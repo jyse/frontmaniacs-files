@@ -1,0 +1,23 @@
+{
+  "name": "Red Frontmaniac",
+  "description": "Likes to eat in the dark",
+  "image": "ipfs://QmSNoKfKiLXncJhTHeEmGqwEqyz7xqXns3ETKBBvpXmrZL/2.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Grey"
+    },
+    {
+      "trait_type": "Hair",
+      "value": "Red"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Pale pink"
+    },
+    {
+      "trait_type": "Accessory",
+      "value": "White blouse"
+    }
+  ]
+}

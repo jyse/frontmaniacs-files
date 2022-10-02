@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+}
+
+body h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+}
+
+body h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+body p {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero {
+  height: 75vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-video {
+  position: absolute;
+  width: 100vw;
+  height: 75vh;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.card {
+  background-color: white;
+  width: 750px;
+  height: 400px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main {
+  background-color: black;
+  color: white;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.nft-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-image {
+  max-width: 300px;
+  max-height: 500px;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+.info {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 12px 40px;
+  background-color: white;
+  border-radius: 40px;
+  color: black;
+  cursor: pointer;
+  transition: 0.25s all ease-in-out;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}

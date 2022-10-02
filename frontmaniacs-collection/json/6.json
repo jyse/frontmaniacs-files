@@ -1,0 +1,23 @@
+{
+  "name": "Grave Goods Frontmaniac",
+  "description": "Likes to eat his human meals at fancy places",
+  "image": "ipfs://QmSNoKfKiLXncJhTHeEmGqwEqyz7xqXns3ETKBBvpXmrZL/7.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Brown"
+    },
+    {
+      "trait_type": "Hair",
+      "value": "Red"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Mint green"
+    },
+    {
+      "trait_type": "Accessory",
+      "value": "Sun glasses and golden chain"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Nocturnal Swift Frontmaniac",
+  "description": "Likes to eat even the skeleton",
+  "image": "ipfs://QmSNoKfKiLXncJhTHeEmGqwEqyz7xqXns3ETKBBvpXmrZL/4.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Brown"
+    },
+    {
+      "trait_type": "Hair",
+      "value": "Dark grey"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Pink"
+    },
+    {
+      "trait_type": "Accessory",
+      "value": "White blouse"
+    }
+  ]
+}
