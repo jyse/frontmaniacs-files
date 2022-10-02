@@ -10,12 +10,22 @@ import nftImage from "./assets/NFTImage.png";
 function App() {
   const [inProgress, setInProgress] = useState(false);
   const [completed, setCompleted] = useState(false);
+  const [account, setAccount] = useState();
+  const [contract, setContract] = useState();
+  const [supply, setSupply] = useState(0);
+  const [hash, setHash] = useState();
 
-  const mint = async () => {};
+  const mint = async () => {
+    // mint functionality
+  };
 
-  const getTotalSupply = async () => {};
+  const getTotalSupply = async () => {
+    // get total supply function
+  };
 
-  const login = async () => {};
+  const login = async () => {
+    // Login functionality
+  };
 
   const getState = () => {
     if (inProgress) {
@@ -43,7 +53,7 @@ function App() {
             </div>
             <div className="information">
               <h2>1st Frontmania NFT collection: Frontmaniacs</h2>
-              <p> 0 minted / 200 </p>
+              <p> {supply} minted / 200 </p>
               <div className="button">Connect Wallet</div>
             </div>
           </div>
