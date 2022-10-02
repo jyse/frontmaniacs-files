@@ -1,6 +1,7 @@
 *****************************************************************
 
-  Building a Smart Contract: Remix & Solidity 101 
+  Part 1: Building a Smart Contract: 
+  In Remix & Solidity 101 
 
 *****************************************************************
 
@@ -46,6 +47,8 @@
 
 💠 Make the safeMint function a payable function
 📝 In order to use msg.value, you need to use payable in your function
+
+💠 Add a requirement of msg.value <= 0.01 ether
 📝 requirements functions like a "if else break statement"
 👉 Go to the Ethereum Unit Converter: https://eth-converter.com/
 📝 Solidity does not take any float numbers and under the hood everything gets converted to WEI (smallest unit)
@@ -53,7 +56,7 @@
 ❗ Make sure to remove the previous contract before you do!
 //////// Add in steps to add VALUE and send eth
 
-💠 Add a totalSupply to the safeMint function
+💠 Add a requirement of totalSupply() <= maxSupply
 📝 You can use other functions from other contracts (e.g. like ERC1155) in your contract of standard ERC721
 👉 add in requirement that totalSupply() has to be smaller and/or equal to maxSupply or else message: "You've reached a limit!" 
 
@@ -83,15 +86,18 @@
 
 💠 Let’s deploy the safeMint to the Goerli network! 
 👉 Go back to Remix 
+👉 Make sure the environment is: the Injected Provider - Metamask
 👉 Now add a value of 10000000 (1 with 7 zero’s) and select GWEI (!!!) 
-Pop this contract open  
-And click on safeMint
-Click on view on etherscan 
-At tokens transferred you’ll your mint coming up 
-And click on the contract address, there you see your safeMint as a transaction! 
+👉 Pop this contract open  
+👉 And click on safeMint 
+🍀 Metamask will pop up!
+👉 Click on view on etherscan 
+👉 At Tokens transferred you’ll your mint coming up 
+👉 And click on the contract address, there you see your safeMint as a transaction! 
+👉 
 
-> Celebration
-We have deployed our first contract to the Goerli Testnet Network AND we have minted our first NFT there! 
+🥳 Celebration
+❗🤩🌟 We have deployed our first contract AND minted our first NFT there! 
 
 
 
