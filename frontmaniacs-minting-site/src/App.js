@@ -10,6 +10,10 @@ import nftImage from "./assets/NFTImage.png";
 function App() {
   const [inProgress, setInProgress] = useState(false);
   const [completed, setCompleted] = useState(false);
+  const [account, setAccount] = useState();
+  const [contract, setContract] = useState();
+  const [supply, setSupply] = useState(0);
+  const [hash, setHash] = useState();
 
   const mint = async () => {};
 
