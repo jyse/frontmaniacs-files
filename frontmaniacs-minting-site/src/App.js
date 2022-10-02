@@ -16,19 +16,31 @@ function App() {
   const [hash, setHash] = useState();
 
   const mint = async () => {
-    // mint functionality
+    // Create payload with value of ethers
+    // Create transaction with safeMint() of contract
+    /*{ Build Loader functionality
+     setInProgress(true)
+     await transaction.wait()
+     setInProgress(false)
+     setCompleted(true) */
   };
 
   const getTotalSupply = async () => {
-    // get total supply function
+    // Get totalSupply() from contract
+    // Convert the Big Number
+    // Set totalSupply
   };
 
   const login = async () => {
-    // Login functionality
+    // Connect wallet
+    // Get account
+    // Wire up contract and set the contract
+    // Contract => getTotalSupply()
   };
 
   const getState = () => {
     if (inProgress) {
+      // Pass hash as props
       return <InProgressMinting />;
     }
 
@@ -36,6 +48,7 @@ function App() {
       return <CompletedMinting />;
     }
 
+    // Pass mint as props
     return <StartMinting />;
   };
 
