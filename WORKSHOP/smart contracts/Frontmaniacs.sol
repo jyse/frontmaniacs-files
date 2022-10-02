@@ -18,7 +18,7 @@ contract Frontmaniacs is ERC721, ERC721Enumerable, Ownable {
         return "ipfs://QmW8Jj4QQJJ5wZggg9SxHJCkhcRfMxkY7peMtgQKoFcdwU/";
     }
 
-    function safeMint() public onlyOwner {
+    function safeMint() public {
         // Make the safeMint function payable
         // Add a requirement of msg.value <= 0.01 ether
         // Add a requirement of totalSupply() <= maxSupply
