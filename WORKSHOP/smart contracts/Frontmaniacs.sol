@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.4;
+pragma solidity ^0.8.10;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
@@ -8,11 +8,8 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract Frontmaniacs is ERC721, ERC721Enumerable, Ownable {
     using Counters for Counters.Counter;
-
-    // string public technology = "Smart Contract"; 
-    // uint8 maxSupply = 20;   
-    // mapping(address => uint) public tokensMap;
-
+    uint256 maxSupply = 20;   
+    
     Counters.Counter private _tokenIdCounter;
 
     constructor() ERC721("Frontmaniacs", "FMS") {}
@@ -23,17 +20,19 @@ contract Frontmaniacs is ERC721, ERC721Enumerable, Ownable {
 
     function safeMint() public onlyOwner {
         // Make the safeMint function payable
-        // 
+        // Add a requirement of msg.value <= 0.01 ether
+        // Add a requirement of totalSupply() <= maxSupply
+        
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(msg.sender, tokenId);
     }
 
-        function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         _requireMinted(tokenId);
 
         string memory baseURI = _baseURI();
-        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenId.toString())) : "";
+        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, Strings.toString(tokenId), ".json")) : "";
     }
 
     // The following functions are overrides required by Solidity.
