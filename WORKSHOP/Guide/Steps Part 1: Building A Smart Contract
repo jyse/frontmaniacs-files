@@ -4,38 +4,39 @@
   In Remix & Solidity 101 
 
 *****************************************************************
-Step 1: 
-💠 Get your Solidity contract 
 
-
+=======> Remix setup <=======
 
 Step 1
-💠 Open up Remix IDE
+💠 Open up Remix IDE and create a workspace
 👉 www.remix-project.org
 👉 Click on Remix IDE
 ❗ Make sure your Metamask is pinned to this browser you are using for Remix!
+👉 Click on the plus icon next to Workspace and make a workspace 
+👉 Choose default as your template and click OK
 
 Step 2
+💠 Use Frontmaniacs.sol in Remix
+👉 Go back to your starter files, go to smart contracts folder and open Frontmaniacs.sol
+👉 Select everything and copy the Frontmaniacs.sol contract 
+👉 Go back to Remix 
+👉 Click on the contracts folder with right mouse click
+👉 Select a new file and name it Frontmaniacs.sol 
+👉 Paste your code into the code editor and save it
+👀 You will see packages coming up on your left 
+
+Step 3
 💠 Setup Remix
-👉 select Auto compile 
-👉 Advanced configurations > select Enable Optimization
+👉 In the left bar, go to the Solidity Compiler section
+👉 switch Auto compile on
+👉 Click on the chevron next to Advanced configurations and switch on Enable Optimization
 
-Step 4
-💠 Introduction of Solidity
-💻 license always at the top 
-💻 always a version of solidity at the top 
-💻 imports so you can use different kinds of standards of contracts 
-💻 contract word is like a class and “is ERC721”, means that this contract inherits functionality from the ERC721 and is like it. 
-💻 for variables types are always used, like string or an unsigned integer whereby 256 represents that this integer will take up 256 bits of space in memory. 
-💻 if you see something with the word using - it means: using A for B, it means that we attach every function from library A in this case Counters, to type B Counter.
-💻 Counters is then used to set the _tokenIdCounter which is a private variable 
-💻 constructor, is like a classic constructor and to make this contract with the name of Frontmaniacs and the symbol token you see very often on OpenSea. 
-💻 private, internal or public all have to do with the accessibility of the function - how much you can see or retrieve from the blockchain. 
-💻 string memory means, this string comes back from a temporary memory - so this won’t cost so much gas fees - or not at all. 
+=======> Code a smart contract <=======
 
-Step 5
+Step 1
 💠 safeMint-function of ERC721 
-👉 Example of ERC721 in your WORKSHOP > smart contracts > Examples
+👉 checkout this function: where does _safeMint() come from? 
+👉 Check out the example of ERC721 in your WORKSHOP > smart contracts > Examples > ERC721.sol 
 
 Step 6
 💠 Deploy the contract locally in Remix 

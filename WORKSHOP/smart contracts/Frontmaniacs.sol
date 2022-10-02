@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
@@ -8,11 +8,11 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract Frontmaniacs is ERC721, ERC721Enumerable, Ownable {
     using Counters for Counters.Counter;
-    uint256 maxSupply = 20;   
-    
     Counters.Counter private _tokenIdCounter;
 
     constructor() ERC721("Frontmaniacs", "FMS") {}
+
+    uint256 maxSupply = 1000; 
 
     function _baseURI() internal pure override returns (string memory) {
         return "ipfs://QmW8Jj4QQJJ5wZggg9SxHJCkhcRfMxkY7peMtgQKoFcdwU/";
@@ -22,7 +22,6 @@ contract Frontmaniacs is ERC721, ERC721Enumerable, Ownable {
         // Make the safeMint function payable
         // Add a requirement of msg.value >= 0.01 ether
         // Add a requirement of totalSupply() <= maxSupply
-        
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(msg.sender, tokenId);

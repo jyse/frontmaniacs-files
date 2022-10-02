@@ -10,3 +10,6 @@
 💻 constructor, is like a classic constructor and to make this contract with the name of Frontmaniacs and the symbol token you see very often on OpenSea. 
 💻 private, internal or public all have to do with the accessibility of the function - how much you can see or retrieve from the blockchain. 
 💻 string memory means, this string comes back from a temporary memory - so this won’t cost so much gas fees - or not at all. 
+
+Resources: 
+- CryptoZombies 
