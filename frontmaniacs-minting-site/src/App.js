@@ -53,7 +53,7 @@ function App() {
             </div>
             <div className="information">
               <h2>1st Frontmania NFT collection: Frontmaniacs</h2>
-              <p> {supply} minted / 200 </p>
+              <p> 0 minted / 200 </p>
               <div className="button">Connect Wallet</div>
             </div>
           </div>
