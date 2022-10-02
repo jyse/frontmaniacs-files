@@ -21,7 +21,7 @@ contract Frontmaniacs is ERC721, ERC721Enumerable, Ownable {
     function safeMint() public {
         // Make the safeMint function payable
         // Add a requirement of msg.value >= 0.01 ether
-        // Add a requirement of totalSupply() >= maxSupply
+        // Add a requirement of totalSupply() <= maxSupply
         
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
