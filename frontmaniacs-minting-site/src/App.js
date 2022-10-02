@@ -15,11 +15,17 @@ function App() {
   const [supply, setSupply] = useState(0);
   const [hash, setHash] = useState();
 
-  const mint = async () => {};
+  const mint = async () => {
+    // mint functionality
+  };
 
-  const getTotalSupply = async () => {};
+  const getTotalSupply = async () => {
+    // get total supply function
+  };
 
-  const login = async () => {};
+  const login = async () => {
+    // Login functionality
+  };
 
   const getState = () => {
     if (inProgress) {
