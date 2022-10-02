@@ -1,0 +1,10 @@
+💠 Start up your project!
+👉 cd frontmaniacs-minting-site!!
+👉 npm install
+❗ Package of ethers and react-loading have already been installed! But these would be the commands
+📝 npm install ethers
+📝 npm install react-loading
+👉 npm start
+
+Step 1
+💠 Connecting your wallet

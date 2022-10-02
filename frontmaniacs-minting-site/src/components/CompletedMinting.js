@@ -2,7 +2,8 @@ import React from "react";
 
 const CompletedMinting = () => {
   const viewOpenSea = () => {
-    const url = `https://testnets.opensea.io/collection/frontmaniacs2-r2g5hmwaem`;
+    // Go Testsnet Opensea
+    const url = "";
     window.open(url, "_blank");
   };
 

@@ -7,6 +7,7 @@ const InProgressMinting = ({ hash }) => {
     const url = "https://goerli.etherscan.io/tx/" + hash;
     window.open(url, "_blank");
   };
+
   return (
     <div>
       <div>Your NFT is being minted. Please wait.</div>

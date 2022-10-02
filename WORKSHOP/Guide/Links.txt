@@ -1,0 +1,13 @@
+Opensea
+👉 NFT Marketplace, minting place and interface to view NFT data on the blockchain
+🌐 www.opensea.io
+
+Remix IDE
+👉 local environment to create, manage and deploy contracts
+👉 also possible to use as tool to deploy on Goerli Testnet Network 
+🌐 www.remix-project.org 
+🚀 Click on Remix IDE to work
+
+
+
+
