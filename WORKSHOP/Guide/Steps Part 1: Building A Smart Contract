@@ -4,7 +4,23 @@
   In Remix & Solidity 101 
 
 *****************************************************************
+Step 1: 
+💠 Get your Solidity contract 
 
+
+
+Step 1
+💠 Open up Remix IDE
+👉 www.remix-project.org
+👉 Click on Remix IDE
+❗ Make sure your Metamask is pinned to this browser you are using for Remix!
+
+Step 2
+💠 Setup Remix
+👉 select Auto compile 
+👉 Advanced configurations > select Enable Optimization
+
+Step 4
 💠 Introduction of Solidity
 💻 license always at the top 
 💻 always a version of solidity at the top 
@@ -17,9 +33,11 @@
 💻 private, internal or public all have to do with the accessibility of the function - how much you can see or retrieve from the blockchain. 
 💻 string memory means, this string comes back from a temporary memory - so this won’t cost so much gas fees - or not at all. 
 
+Step 5
 💠 safeMint-function of ERC721 
 👉 Example of ERC721 in your WORKSHOP > smart contracts > Examples
 
+Step 6
 💠 Deploy the contract locally in Remix 
 👉 First compile your contract and fix errors 
 👉 Go to the section Deploy & Run transactions on the left side 
@@ -59,6 +77,10 @@
 💠 Add a requirement of totalSupply() <= maxSupply
 📝 You can use other functions from other contracts (e.g. like ERC1155) in your contract of standard ERC721
 👉 add in requirement that totalSupply() has to be smaller and/or equal to maxSupply or else message: "You've reached a limit!" 
+
+-- Alchemy account 
+-- Metamask show/hide 
+-- Metamask get Test ETH
 
 💠 Deploy this contract to the Goerli Testnet Network! 
 ❗ You need to have your Metamask installed and pin it to your browser! 
