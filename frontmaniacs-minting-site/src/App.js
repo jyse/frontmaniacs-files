@@ -60,11 +60,14 @@ function App() {
         <div className="card">
           <div className="main">
             <div className="nft-section">
-              <img className="nft-image" src={nftImage} />
+              <img className="nft-image" src={nftImage} alt="image" />
             </div>
-            <div className="information">
-              <h2>1st Frontmania NFT collection: Frontmaniacs</h2>
-              <p> 0 minted / 200 </p>
+            <div className="information-header-container">
+              <h4 className="information-subheader">
+                1st Frontmania NFT collection:
+              </h4>
+              <h1 className="information-header">Frontmaniacs </h1>
+              <p> 0 minted / 1000 </p>
               {/* // Step 5: insert getState() */}
               <div className="button">Connect Wallet</div>
             </div>
