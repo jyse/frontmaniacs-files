@@ -38,7 +38,7 @@ function App() {
 
   const getState = () => {
     if (inProgress) {
-      // Step 8? Pass in the transaction hash to InProgressMinting Component
+      // Step 8: Pass in the transaction hash to InProgressMinting Component
       return <InProgressMinting />;
     }
 
