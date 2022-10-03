@@ -2,7 +2,7 @@ import React from "react";
 
 const CompletedMinting = () => {
   const viewOpenSea = () => {
-    // Go Testsnet Opensea
+    // View your collection on Testnet OpenSea (www.testnets.opensea.io)
     const url = "";
     window.open(url, "_blank");
   };

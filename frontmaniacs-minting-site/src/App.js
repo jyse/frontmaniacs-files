@@ -16,31 +16,29 @@ function App() {
   const [hash, setHash] = useState();
 
   const mint = async () => {
-    // Create payload with value of ethers
-    // Create transaction with safeMint() of contract
-    /*{ Build Loader functionality
-     setInProgress(true)
-     await transaction.wait()
-     setInProgress(false)
-     setCompleted(true) */
+    // Step 4: Write the mint function
+    //
+    // Step 7: Set the variables for progress and completed
+    // setInProgress(true)
+    //  await transaction.wait()
+    //  setInProgress(false)
+    //  setCompleted(true)
   };
 
   const getTotalSupply = async () => {
-    // Get totalSupply() from contract
-    // Convert the Big Number
-    // Set totalSupply
+    // Step 3: Add totalSupply and use it from the contract
   };
 
+  // Step 3: Contract => getTotalSupply()
+
   const login = async () => {
-    // Connect wallet
-    // Get account
-    // Wire up contract and set the contract
-    // Contract => getTotalSupply()
+    // Step 1: Connect wallet (check Metamask + accounts)
+    // Step 2: Wire up contract (provider, signer, NFTContract)
   };
 
   const getState = () => {
     if (inProgress) {
-      // Pass hash as props
+      // Step 8? Pass in the transaction hash to InProgressMinting Component
       return <InProgressMinting />;
     }
 
@@ -48,7 +46,7 @@ function App() {
       return <CompletedMinting />;
     }
 
-    // Pass mint as props
+    // Step 6: Pass mint as props
     return <StartMinting />;
   };
 
@@ -67,6 +65,7 @@ function App() {
             <div className="information">
               <h2>1st Frontmania NFT collection: Frontmaniacs</h2>
               <p> 0 minted / 200 </p>
+              {/* // Step 5: insert getState() */}
               <div className="button">Connect Wallet</div>
             </div>
           </div>

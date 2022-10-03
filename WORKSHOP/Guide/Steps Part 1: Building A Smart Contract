@@ -1,28 +1,26 @@
-*****************************************************************
+*************************************************************************************************************
 
   Part 1: Building a Smart Contract: 
   In Remix & Solidity 101 
 
-*****************************************************************
+*************************************************************************************************************
 
 =======> Remix setup <=======
 
 Step 1
-💠 Open up Remix IDE and create a workspace
+💠 Open up Remix IDE
 👉 www.remix-project.org
 👉 Click on Remix IDE
 ❗ Make sure your Metamask is pinned to this browser you are using for Remix!
-👉 Click on the plus icon next to Workspace and make a workspace 
-👉 Choose default as your template and click OK
 
 Step 2
 💠 Use Frontmaniacs.sol in Remix
-👉 Go back to your starter files, go to smart contracts folder and open Frontmaniacs.sol
-👉 Select everything and copy the Frontmaniacs.sol contract 
+👉 In you starter files, go to smart contracts folder and open Frontmaniacs.sol
+👉 Copy the Frontmaniacs.sol contract 
 👉 Go back to Remix 
 👉 Click on the contracts folder with right mouse click
 👉 Select a new file and name it Frontmaniacs.sol 
-👉 Paste your code into the code editor and save it
+👉 Paste your code into the code editor
 👀 You will see packages coming up on your left 
 
 Step 3
@@ -31,97 +29,125 @@ Step 3
 👉 switch Auto compile on
 👉 Click on the chevron next to Advanced configurations and switch on Enable Optimization
 
-=======> Code a smart contract <=======
+Step 4
+💠 What is Remix? A tour
+👉  a online IDE where you can create, manage, execute and deploy your smart contracts
+👉 If you go to the Deploy and Run Transactions section via the left bar, 
+You can see there are different environments, where we can test and deploy your contracts!
+These are like little blockchains environments we can use!
+ 👉The local VM London will have his own account but if you use the Injected Provider, that’s when Metamask will be used! Like this - with the Goerli (5) network and so your Metamask account shows up like here
+ 👉 you can send ETH through this 
+😃 And yes, we are all going to be doing this so get excited!
 
-Step 1
-💠 safeMint-function of ERC721 
-👉 checkout this function: where does _safeMint() come from? 
-👉 Check out the example of ERC721 in your WORKSHOP > smart contracts > Examples > ERC721.sol 
+=======> Coding a smart contract <=======
 
-Step 6
-💠 Deploy the contract locally in Remix 
+💠 Step 1: Deploy a contract locally on VM Remix (London)
 👉 First compile your contract and fix errors 
 👉 Go to the section Deploy & Run transactions on the left side 
-👉 Make sure Remix VM (London) is selected - 📝 this is your local environment
+👉 Make sure Remix VM (London), the local machine  is selected 
 👉 Select the right contract - Frontmaniacs.sol
+👉 Make sure your terminal is visible on the right bottom side
 👉 And hit Deploy
-👉 It should come up under Deployed contracts 
-👉 Unfold this menu and you see all the functions of the contract, including safeMint
+👀 It should come up under Deployed contracts 
+👉 click upon the chevron to unfold this contract 
+👀 you see all the functions of the contract, including safeMint
+
+💠 Step 2: safeMint() locally on VM Remix (London)
+👉  Click safeMint
+👀 and on the right side you can see that you’ve minted a NFT!
+
+💠 Step 3: Try out balanceOf, ownerOf, tokenURI functions after using safeMint()
+👉 Copy your account address
+❌ Do NOT deploy your contract again! 
+👉 Paste your account address as parameter in the balanceOf function
+👉 and call the balanceOf()
+👀 It should be visible that you’ve minted 1 NFT ⇒ uint256: 1
+⏯️ You can play with it by clicking safeMint() again and calling balanceOf again
+👉 At ownerOf() insert a zero as tokenId since this is your first NFT
+👉 call ownerOf() and 
+👀 you’ll see your account address given by VM Remix (London) local environment
+👉 at tokenURI insert a zero as tokenId and call the function
+👀 You’ll get a link to the tokenID which is a JSON object that holds the link to the image and properties of the NFT. 
+
+💠 Step 4: Make the safeMint function payable
+👉 add payable keyword next to public in the function
+👉 write require(msg.value >= ether, “more money needed”)
+
+💠 Step 5: Ethereum Metric System
+👉 go to this site: https://eth-converter.com/
+
+💠 Step 6: use safeMint again without value 
+👉 Compile your contract and fix errors if needed
+👉 Go to Deploy & Run Transactions section
+❗ Remove your previous contract under Deployed contracts 
+❗ Make sure you are on Remix VM London
+👉 Hit Deploy
+👉 Hit safeMint() 
+👀 It will give you….what?
+❌ Which error message did you get?
+👉👉 This will give you an error because you’re not sending any ETH! 
+👀 Look up Value in the Deploy & Run Transactions section
+👉 Go to the: 🌐 https://eth-converter.com/
+👉 Convert 0.01 ether and copy paste the value in GWEI - which is 1 with 7 0’s
+👉 Go back to Remix and to the Deploy & Run Transactions section
+👉 Paste that into Value in the Deploy & Run Transactions section
+❗Select the GWEI unit as your Ethereum unit!! 
 👉 Click safeMint
-💥 And then you see on the right side that you’ve minted a NFT locally on the VM London
+👀 You should see on the right the amount converted into WEI
+🥳 Congratulations! You have minted your first NFT with ETH on a local blockchain!
 
-💠 Use the balanceOf and ownerOf function 🚀
-📝 Note: Remix is a local blockchain with your own account (not Metamask!)
-👉 Copy your account address from 
-👉 check the functionality of balanceOf and OwnerOf. 
-👉 At ownerOf you fill in as tokenId 0, since this was your first time minting
-❓ What do you see? 
+💠 Step 7: add the totalSupply function to the safeMint Function
+👉 require(totalSupply() >= maxSupply, “You have reached the limit”) 
 
-//////Check this tokenURI function
-💠 the tokenURI function
-👉 Now that you have minted a NFT 
-👉 Try to retrieve the URI of tokenId 0 
-👉 Look at the JSON-object and try to retrieve the image in the browser by using the hash
-📝 https://ipfs.io/ipfs/ <hash> / <image>
+❗🦊 In case you haven not installed Metamask yet, connected it to Goerli Testnet Network and have gotten an Alchemy account to get GoerliETH through www.goerlifaucet.com, 
+Do that first!! 🦊❗
 
-💠 Make the safeMint function a payable function
-📝 In order to use msg.value, you need to use payable in your function
-
-💠 Add a requirement of msg.value <= 0.01 ether
-📝 requirements functions like a "if else break statement"
-👉 Go to the Ethereum Unit Converter: https://eth-converter.com/
-📝 Solidity does not take any float numbers and under the hood everything gets converted to WEI (smallest unit)
-👉 Deploy your contract again
-❗ Make sure to remove the previous contract before you do!
-//////// Add in steps to add VALUE and send eth
-
-💠 Add a requirement of totalSupply() <= maxSupply
-📝 You can use other functions from other contracts (e.g. like ERC1155) in your contract of standard ERC721
-👉 add in requirement that totalSupply() has to be smaller and/or equal to maxSupply or else message: "You've reached a limit!" 
-
--- Alchemy account 
--- Metamask show/hide 
--- Metamask get Test ETH
-
-💠 Deploy this contract to the Goerli Testnet Network! 
-❗ You need to have your Metamask installed and pin it to your browser! 
-👉 Find Settings in Metamask and click on Show / hide test networks to switch that on 
+💠 Step 8: Deploy this contract to the Goerli Testnet Network - INSTALL METAMASK
+📝 You need your Metamask installed and pinned to the browser you’re using for Remix. 
+👉 Show / hide test networks - turn that on 
+👉 You need to have your Metamask installed 
+🦊 Go to your Metamask: 
+👉 Click the network at the top and then click on show / hide test networks - turn that on 
 👉 And then select the Goerli test network 
-👉 Go to www.goerlifaucet.com 
+🌐 Go to www.goerlifaucet.com 
+👉 Make an account on alchemy.com
 👉 Copy your account address
 👉 And get some TEST ETH of 0.1 to test things out 
-🍀 You got some ETH? Let's go!
+
+💠 Step 9: Deploy this contract to the Goerli Testnet Network
 👉 Go back to Remix 
 👉 Compile and fix errors
 👉 Go to the Deploy & Run Transactions section 
-👉 Select another environment: ❗The Injected Provider - Metamask
-👉 You will see the Goerli network coming up and your account address is the same as in your Metamask
-👉 Make sure the right contract (Frontmaniacs.sol) is selected 
-👉 Remove your previous deployed contract below
+❗Select another environment: the Injected Provider - Metamask
+👀 You will see the Goerli network coming up and your account address of your Metamask
+👉 Make sure the right contract is selected 
+❗Remove your previous deployed contract below
 👉 Hit deploy 
-🍀 Metamask will pop up! Confirm - could be that this has to be done twice
-👀 On the right you see ‘view on etherscan’ in your terminal, click on it!
-👀 We can see a creation of contract right now on the Goerli Testnet Network 
-👉 Click on the contract address in the middle 
-👉 Now you're at the contract page where you can see all transactions happening of which the first is contract creation. 
-❗❗ Copy the URL in the browser of your contract page: VERY IMPORTANT
-❗❗ Every time you change your contract in the meantime, you need to deploy it again and also copy this URL!
+👀 🦊Metamask will pop up! Confirm
+👉 And click on ‘view on etherscan’ in your terminal 
+👀 Goerli Etherscan: you can see a contract creation now as a transaction on the Goerli Testnet Network 
+🧘‍♀️You have to wait a little bit….for the contract to be created
+👉 You’ll see at the “To:” section the contract address, click upon it.
+👉 Here you can see the contract and everything that happens in and around it.
+❗❗Let this browser page open or save this URL somewhere!
+👉 💥 You’re going to need that Contract address at the top, so copy that and save it somewhere
 
-💠 Let’s deploy the safeMint to the Goerli network! 
-👉 Go back to Remix 
-👉 Make sure the environment is: the Injected Provider - Metamask
-👉 Now add a value of 10000000 (1 with 7 zero’s) and select GWEI (!!!) 
-👉 Pop this contract open  
-👉 And click on safeMint 
-🍀 Metamask will pop up!
-👉 Click on view on etherscan 
-👉 At Tokens transferred you’ll your mint coming up 
-👉 And click on the contract address, there you see your safeMint as a transaction! 
-👉 
+💠 Step 10: use safeMint and mint a NFT to the Goerli network
+👉 Go back to remix
+❌ Go to the Deploy and Run Transactions section
+👉 Look up Value and add a value of 1 + 7 0’s and select the unit GWEI 
+👀 Make sure to check that!
+❌❗DO NOT RE-DEPLOY YOUR CONTRACT!!! DO NOT HIT DEPLOY!!
+👉 pop your contract open at the Deployed contracts
+👉 click on safeMint
+🦊 Your Metamask will ask for 0.01 GoerliETH! So confirm
+👀 On the right bottom in your terminal, you’ll see a link “view on etherscan”
+ 👉click on view on etherscan 
+🧘‍♀️ Takes some time…..
+👀 At etherscan, you’ll see at Tokens Transfer that your mint is coming up 
+ 👉Click on the contract address and BOOM! There’s your safeMint transaction with a value of 0.01 ETH! 
+🥳 We have now deployed and minted a NFT on the Goerli Testnet Network!
 
-🥳 Celebration
-❗🤩🌟 We have deployed our first contract AND minted our first NFT there! 
-
-
+❗❗❗ Do not close REMIX or your contract address page!! <<<
 
 
