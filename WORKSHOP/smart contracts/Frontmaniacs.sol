@@ -15,13 +15,22 @@ contract Frontmaniacs is ERC721, ERC721Enumerable, Ownable {
     uint256 maxSupply = 1000; 
 
     function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://QmW8Jj4QQJJ5wZggg9SxHJCkhcRfMxkY7peMtgQKoFcdwU/";
+        
+        return "ipfs://QmRkEy66AczB2yT4mzicSW1sPLhUiM98AwBiKC1aEDHqnC/";
     }
 
+    // Step 1: Researching the safeMint()
+    // Step 2: A tokenId always increments with mint
+    // Step 3: Deploy a contract locally on VM Remix London
+    // Step 4: Use safeMint() locally on VM Remix London
+    // Step 5: Try out balanceOf, ownerOf, tokenURI functions after using safeMint()
     function safeMint() public {
-        // Make the safeMint function payable
-        // Add a requirement of msg.value >= 0.01 ether
-        // Add a requirement of totalSupply() <= maxSupply
+        // Step 6: Make the safeMint function payable
+        // Step 6a: Add a requirement of msg.value >= 0.01 ether
+        // Step 7: Ethereum Metric System
+        // Step 8: use SafeMint again without value
+        // Step 9: use SafeMint again WITH value
+        // Step 10: Add a requirement of totalSupply() <= maxSupply
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(msg.sender, tokenId);

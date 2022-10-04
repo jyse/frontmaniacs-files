@@ -4,7 +4,17 @@
 
 *************************************************************************************************************
 
-💠 Step 1: Connect wallet (check Metamask + accounts)
+💠 Step 1: Run the app
+👉 Open up your starter files 
+👉 Go to the frontmaniacs-minting-site folder and
+👉 Click on App.js
+❗Run your app in the browser! 
+👉Open up an integrated terminal 
+❗❗cd to the frontmaniacs-minting-site-folder 
+👉 and run your app with npm start
+👉 do npm install in case you can’t start it up! 
+
+💠 Step 2: Connect wallet (check Metamask + accounts)
 👉 Go to your starter files and open up App.js
 👉 Go to the login()
 💻 Write if (typeof window.ethereum !== "undefined") { }
@@ -23,12 +33,12 @@
 👉 go back to the code
 👉 set the walletAccount => setAccount(walletAccount)
 
-💠 Step 2 Render mint button conditionally
+💠 Step 3: Render mint button conditionally
 👉 go to the line of <div className=”button”>Connect Wallet </div>
 👉 add {account ? (<div className=”button”>MINT</div>) : (<div className=”button”>Connect Wallet”</div>} under <p>
 ❗ Make sure to add a onClick of the mint function on the Mint button and an onClick of the login function on the Connect Wallet button
 
-💠 Step 3: Wire up contract (provider, signer, NFTContract)
+💠 Step 4: Wire up contract (provider, signer, NFTContract)
 👉 Import ethers at the top of our code: import {ethers} from “ethers”
 👉 Remember your contract address? Copy and paste it here
 ❗If you forgot your contract address, check your terminal in Remix and try to find the latest contract creation by also checking etherscan links!
@@ -55,27 +65,27 @@
 💻 Write setContract(NFTContract)
 ❗ Make sure all this functionality is INSIDE your if-statement (typeof window.ether etc.)
 
-💠 Step 4: Add totalSupply and use it from the contract
+💠 Step 5: Add totalSupply and use it from the contract
 💻 Write useEffect with contract as dependency and getTotalSupply will fire of if the contract is true.
 💻 Write const totalSupply = await contract.totalSupply();
 💻 Write setSupply(totalSupply.toNumber())
 💻 Write {supply} to your frontend → {supply} minted / 200
 
-💠 Step 5: Write the mint function
+💠 Step 6: Write the mint function
 👉 Create a payload that takes a {value: ethers.utils.parseEther(“0.01”)
 💻 Write const payload = { value: ethers.utils.parseEther("0.01") };
 💻 Write const transaction = await contract.safeMint(payload);
 💻 Write console.log(transaction.hash)
 💻 Write setHash(transaction.hash)
 
-💠 Step 6: Insert getState()
+💠 Step 7: Insert getState()
 👉 Go to the account variable in your below
 👉 Remove the Mint button and replace it with getState()
 👀 Look at the getState function we have
 
-💠 Step 7: Pass mint function to StartMinting component => just add mint={mint}
+💠 Step 8: Pass mint function to StartMinting component => just add mint={mint}
 
-💠 Step 8: Set the variables for progress and completed
+💠 Step 9: Set the variables for progress and completed
 👉 Go to the mint function (uncomment the following code)
 - setInProgress(true)
 - await transaction.wait()
@@ -83,13 +93,13 @@
 - setCompleted(true)
 👀 go back to getState()
 
-💠 Step 9: Pass in the transaction hash to InProgressMinting Component
+💠 Step 10: Pass in the transaction hash to InProgressMinting Component
 👀 Checkout the InProgressMinting component
 👉 Pass the transaction hash as props, so the URL can be made up to look at this transaction in Etherscan
 💻 Write <InProgressMintin hash={hash}/>
 ❗Make sure your transaction.hash is set as a hash!
 
-💠 Step 10: Check Etherscan when the NFT is in progress of being minted
+💠 Step 11: Check Etherscan when the NFT is in progress of being minted
 👉 Mint a NFT on the website!
 👀 Metamask should come up and ask you for ether, confirm
 👉 Click to see Etherscan
@@ -99,7 +109,7 @@
 👀 You can see all your mints there!
 👉 Copy the contract address
 
-💠 Step 11: View your collection on Testnet OpenSea
+💠 Step 12: View your collection on Testnet OpenSea
 👉 Google Testnet OpenSea
 🌐 https://testnets.opensea.io/
 ❗ Testnet is different from the normal OpenSea!! You should see Testnets in the logo of OpenSea!
@@ -109,7 +119,7 @@
 👉 Paste it into your CompletedMinting component at url variable
 👀 The URL should like something like this “https://testnets.opensea.io/collection/<YourCollection>";
 
-💠 Step 12 => In case you DON'T SEE your collection on Testnet OpenSea
+💠 Step 13: In case you DON'T SEE your collection on Testnet OpenSea
 👉 In case you don't see your collection (sometimes that’s the ase),
 👉 grab your contractAddress
 👉 use this link 🌐 https://testnets.opensea.io/assets/goerli/<contractAddress>/0 and paste in your contractAddress at <contractAddress>
