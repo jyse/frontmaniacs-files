@@ -34,13 +34,13 @@
 👀 And check the console for your account address!
 
 💠 Step 3: Render mint button conditionally
-👉 Go to the line of <div className=”button connect”>Connect Wallet </div>
-💻 Write {account ? (<div className=”button mint”>MINT</div>) : (<div className=”button”>Connect Wallet”</div>} under <p>
+👉 Go to the line of <div className=”button”>Connect Wallet </div>
+💻 Write {account ? (<div className=”button”>MINT</div>) : (<div className=”button”>Connect Wallet”</div>} under <p>
 ❗ Make sure to add a onClick of the mint function on the Mint button and an onClick of the login function on the Connect Wallet button
 
 💠 Step 4: Wire up contract (provider, signer, NFTContract)
 👉 Import ethers at the top of our code: import {ethers} from “ethers”
-👉 Remember your contract address? Copy and paste it here
+👉 Remember your contract address? Copy and paste it here (still in the login function)
 ❗If you forgot your contract address, check your terminal in Remix and try to find the latest contract creation by also checking etherscan links!
 🙋‍♂️🙋‍♀️ Otherwise ask me or my support team, to get a contractAddress and make sure to ask about an abi
 👉 Make a contractAddress variable and set your contractAddress as a value
@@ -76,6 +76,7 @@
 💻 Write const transaction = await contract.safeMint()
 👉 Create a payload that takes a {value: ethers.utils.parseEther(“0.01”)
 💻 Write const payload = { value: ethers.utils.parseEther("0.01") };
+💻 Add the payload to the contract.safeMint(payload) function like this
 💻 Write console.log(transaction.hash)
 💻 Write setHash(transaction.hash)
 🌐 Go to your site, connect your wallet and MINT a NFT! 
