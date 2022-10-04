@@ -34,8 +34,8 @@
 👀 And check the console for your account address!
 
 💠 Step 3: Render mint button conditionally
-👉 Go to the line of <div className=”button”>Connect Wallet </div>
-💻 Write {account ? (<div className=”button”>MINT</div>) : (<div className=”button”>Connect Wallet”</div>} under <p>
+👉 Go to the line of <div className=”button connect”>Connect Wallet </div>
+💻 Write {account ? (<div className=”button mint”>MINT</div>) : (<div className=”button”>Connect Wallet”</div>} under <p>
 ❗ Make sure to add a onClick of the mint function on the Mint button and an onClick of the login function on the Connect Wallet button
 
 💠 Step 4: Wire up contract (provider, signer, NFTContract)
@@ -97,7 +97,7 @@
 - setCompleted(true)
 👀 go back to getState()
 
-💠 Step 10: // Step 10: Pass in the transaction hash to InProgressMinting Component and check this component
+💠 Step 10: Pass in the transaction hash to InProgressMinting Component and check this component
 👀 Checkout the InProgressMinting component
 👉 Pass the transaction hash as props, so the URL can be made up to look at this transaction in Etherscan
 💻 Write hash={hash} as props to the InProgressMinting Component 
@@ -112,8 +112,11 @@
 👉 Click on the contract address
 👀 You can see all your mints there!
 👉 Copy the contract address
+👉 Go back to App.js 
 
-💠 Step 12: View your collection on Testnet OpenSea
+💠 Step 12: Check the CompletedMinting component
+
+💠 Step 13: View your collection on Testnet OpenSea
 👉 Google Testnet OpenSea
 🌐 Or use this URL https://testnets.opensea.io/
 ❗ Testnet is different from the normal OpenSea!! You should see Testnets in the logo of OpenSea!
@@ -124,7 +127,7 @@
 👀 The URL should like something like this “https://testnets.opensea.io/collection/<YourCollection>";
 💻 Write const url = ““https://testnets.opensea.io/collection/<YourCollection>";”
 
-💠 Step 13: In case you DON'T SEE your collection on Testnet OpenSea
+💠 Step 14: In case you DON'T SEE your collection on Testnet OpenSea
 👉 In case you don't see your collection (sometimes that’s the ase),
 👉 Grab your contractAddress
 👉 Use and adjust this link 🌐 https://testnets.opensea.io/assets/goerli/<contractAddress>/0 and paste your contractAddress at <contractAddress>

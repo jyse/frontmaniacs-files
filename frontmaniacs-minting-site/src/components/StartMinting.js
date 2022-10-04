@@ -3,7 +3,7 @@ import React from "react";
 const StartMinting = ({ mint }) => {
   return (
     <div className="mintStart">
-      <div onClick={mint} className="button">
+      <div onClick={mint} className="button mint">
         START MINTING
       </div>
     </div>

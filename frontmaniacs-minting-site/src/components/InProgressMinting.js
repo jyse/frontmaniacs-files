@@ -12,7 +12,7 @@ const InProgressMinting = ({ hash }) => {
     <div>
       <div>Your NFT is being minted. Please wait.</div>
       <ReactLoading type="bubbles" color="#fff" />
-      <div className="button" onClick={checkEtherscan}>
+      <div className="button progress" onClick={checkEtherscan}>
         CHECK ETHERSCAN
       </div>
     </div>

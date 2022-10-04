@@ -13,7 +13,7 @@ const CompletedMinting = () => {
   return (
     <div>
       <div>All set! You NFT has been minted.</div>
-      <div className="button" onClick={viewOpenSea}>
+      <div className="button open-sea" onClick={viewOpenSea}>
         VIEW OPENSEA
       </div>
     </div>

@@ -124,6 +124,32 @@ body p {
   justify-content: center;
 }
 
+.connect {
+  background-color: #54bcd4;
+}
+
+.mint {
+  background-color: rgb(128, 0, 109);
+}
+
+.progress {
+  background-color: white;
+  color: black;
+}
+
+.open-sea {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+}
+
+.openSeaLogo {
+  width: 40px;
+  height: 40px;
+  margin: 0px 7px;
+}
+
 .minting-success {
   display: flex;
   flex-direction: column;

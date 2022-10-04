@@ -10,7 +10,7 @@ import nftImage from "./assets/NFTImage.png";
 // Step 1: Run the app
 
 function App() {
-  const [inProgress, setInProgress] = useState(false);
+  const [inProgress, setInProgress] = useState();
   const [completed, setCompleted] = useState(false);
   const [account, setAccount] = useState();
   const [contract, setContract] = useState();
@@ -76,7 +76,7 @@ function App() {
                 <p> 0 / 1000 minted </p>
                 {/* // Step 3: Render a mint button conditionally */}
                 {/* // Step 7: insert getState() */}
-                <div className="button">Connect Wallet</div>
+                <div className="button connect">Connect Wallet</div>
               </div>
             </div>
           </div>
