@@ -22,31 +22,32 @@
 💻 Write const accounts = await window.ethereum.request({
    method: "eth_requestAccounts"
    });
-💻 Write const walletAccount = accounts[0] in front of the ethereum request
+💻 Write const walletAccount = accounts[0]
 👉 console.log(walletAccount);
+👉 set the walletAccount 
+💻 Write setAccount(walletAccount)
 ❗ Add the login() to your Connect wallet button!
 👀 Go to the browser and
-❗Disconnect your Metamask first if it is connected!!
+❗ Disconnect your Metamask first if it is connected!!
 👉 Try to connect your wallet by clicking the Connect Wallet button
 🦊 Does your Metamask come up?
 👀 And check the console for your account address!
-👉 go back to the code
-👉 set the walletAccount => setAccount(walletAccount)
 
 💠 Step 3: Render mint button conditionally
-👉 go to the line of <div className=”button”>Connect Wallet </div>
-👉 add {account ? (<div className=”button”>MINT</div>) : (<div className=”button”>Connect Wallet”</div>} under <p>
+👉 Go to the line of <div className=”button”>Connect Wallet </div>
+💻 Write {account ? (<div className=”button”>MINT</div>) : (<div className=”button”>Connect Wallet”</div>} under <p>
 ❗ Make sure to add a onClick of the mint function on the Mint button and an onClick of the login function on the Connect Wallet button
 
 💠 Step 4: Wire up contract (provider, signer, NFTContract)
 👉 Import ethers at the top of our code: import {ethers} from “ethers”
 👉 Remember your contract address? Copy and paste it here
 ❗If you forgot your contract address, check your terminal in Remix and try to find the latest contract creation by also checking etherscan links!
-🙋‍♂️🙋‍♀️Otherwise ask me or my support team, to get a contractAddress and make sure to ask about an abi
-👉 make a contractAddress variable and set your contractAddress as a value
-👀 Example: const contractAddres = “0xdExampleAccount281”
+🙋‍♂️🙋‍♀️ Otherwise ask me or my support team, to get a contractAddress and make sure to ask about an abi
+👉 Make a contractAddress variable and set your contractAddress as a value
+👀 Example: const contractAddres = “0xdContractAddressExample883424” 
+💻 Write const contractAddres = “0xdContractAddressExample88385”
 🌐 documentation on ethers is here: https://docs.ethers.io/v5/
-👉 Add these pieces of code:
+👇 Write these pieces of code:
 💻 Write const provider = new ethers.providers.Web3Provider(window.ethereum);
 💻 Write const signer = provider.getSigner(walletAccount);
 💻 Write let NFTContract = new ethers.Contract(contractAddress, abi, signer);
@@ -72,18 +73,21 @@
 💻 Write {supply} to your frontend → {supply} minted / 200
 
 💠 Step 6: Write the mint function
+💻 Write const transaction = await contract.safeMint()
 👉 Create a payload that takes a {value: ethers.utils.parseEther(“0.01”)
 💻 Write const payload = { value: ethers.utils.parseEther("0.01") };
-💻 Write const transaction = await contract.safeMint(payload);
 💻 Write console.log(transaction.hash)
 💻 Write setHash(transaction.hash)
+🌐 Go to your site, connect your wallet and MINT a NFT! 
+🦊 Your Metamask should pop up and ask you to pay 0.01 ether! Confirm
 
 💠 Step 7: Insert getState()
-👉 Go to the account variable in your below
-👉 Remove the Mint button and replace it with getState()
+👉 Go to where the account variable is rendered
+👉 Remove the Mint button below it and replace it with getState()
 👀 Look at the getState function we have
 
-💠 Step 8: Pass mint function to StartMinting component => just add mint={mint}
+💠 Step 8: Pass mint function to StartMinting component 
+💻 Write mint={mint} as props to the StartMinting Component 
 
 💠 Step 9: Set the variables for progress and completed
 👉 Go to the mint function (uncomment the following code)
@@ -96,7 +100,7 @@
 💠 Step 10: Pass in the transaction hash to InProgressMinting Component
 👀 Checkout the InProgressMinting component
 👉 Pass the transaction hash as props, so the URL can be made up to look at this transaction in Etherscan
-💻 Write <InProgressMintin hash={hash}/>
+💻 Write hash={hash} as props to the InProgressMinting Component 
 ❗Make sure your transaction.hash is set as a hash!
 
 💠 Step 11: Check Etherscan when the NFT is in progress of being minted
@@ -111,21 +115,25 @@
 
 💠 Step 12: View your collection on Testnet OpenSea
 👉 Google Testnet OpenSea
-🌐 https://testnets.opensea.io/
+🌐 Or use this URL https://testnets.opensea.io/
 ❗ Testnet is different from the normal OpenSea!! You should see Testnets in the logo of OpenSea!
 👉 In the Search bar - paste in your contract address!
 👀 You should see your collection come up with the amount of NFTs you have minted up until now!
 👉 Grab the URL from this collection-page 
 👉 Paste it into your CompletedMinting component at url variable
 👀 The URL should like something like this “https://testnets.opensea.io/collection/<YourCollection>";
+💻 Write const url = ““https://testnets.opensea.io/collection/<YourCollection>";”
 
 💠 Step 13: In case you DON'T SEE your collection on Testnet OpenSea
 👉 In case you don't see your collection (sometimes that’s the ase),
-👉 grab your contractAddress
-👉 use this link 🌐 https://testnets.opensea.io/assets/goerli/<contractAddress>/0 and paste in your contractAddress at <contractAddress>
-👀 You’ll see your last minted NFT with tokenId 0
-👉 Click on the collection Frontmaniacs
-👉 Grab that URL at the top and paste it into your CompletedMinting component as a value for the variable url.
+👉 Grab your contractAddress
+👉 Use and adjust this link 🌐 https://testnets.opensea.io/assets/goerli/<contractAddress>/0 and paste your contractAddress at <contractAddress>
+👀 You’ll see your last minted NFT with tokenId of 0
+👉 Click on the collection Frontmaniacs link on the site
+👉 Grab that URL from that collection page at the top and paste it into your CompletedMinting at url variable
+👀 The URL should like something like this https://testnets.opensea.io/assets/goerli/<YourCollection>";
+💻 Write const url = ““https://testnets.opensea.io/collection/<YourCollection>";”
+
 🌐 Mint a Frontmaniac NFT on your own web3 app!!
 
 We are DONE!!! 🥳 Good work!!
