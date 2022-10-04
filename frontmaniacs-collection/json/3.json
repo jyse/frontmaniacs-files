@@ -1,0 +1,19 @@
+{
+  "name": "Manilla Soba Frontmaniac",
+  "description": "Likes to eat only girls only",
+  "image": "ipfs://QmTyc9i7WZQUTSaEuwbTzrxf3JkXnEkwRPzTG9nsVnTofr/3.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Brown"
+    },
+    {
+      "trait_type": "Hair",
+      "value": "Orange"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Light grey"
+    }
+  ]
+}

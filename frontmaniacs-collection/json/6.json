@@ -1,0 +1,23 @@
+{
+  "name": "Grave Goods Frontmaniac",
+  "description": "Likes to eat brains only",
+  "image": "ipfs://QmTyc9i7WZQUTSaEuwbTzrxf3JkXnEkwRPzTG9nsVnTofr/6.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Brown"
+    },
+    {
+      "trait_type": "Hair",
+      "value": "Dark grey"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Mint green"
+    },
+    {
+      "trait_type": "Accessory",
+      "value": "Holo lens"
+    }
+  ]
+}

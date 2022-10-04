@@ -1,0 +1,23 @@
+{
+  "name": "Vile Jet Frontmaniac",
+  "description": "Likes to eat human fingers only",
+  "image": "ipfs://QmTyc9i7WZQUTSaEuwbTzrxf3JkXnEkwRPzTG9nsVnTofr/4.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Brown"
+    },
+    {
+      "trait_type": "Hair",
+      "value": "Turqoise"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Light grey"
+    },
+    {
+      "trait_type": "Accessory",
+      "value": "White blouse"
+    }
+  ]
+}
