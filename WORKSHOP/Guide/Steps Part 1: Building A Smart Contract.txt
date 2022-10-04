@@ -142,6 +142,7 @@ Do that first!! 🦊❗
 ❗ Select another environment: the Injected Provider - Metamask
 👀 You will see the Goerli network coming up and your account address of your Metamask
 👉 Make sure the right contract is selected 
+❌ YOU SHOULD NOT HAVE ANY DEPLOYED CONTRACTS 
 👉 Hit deploy 
 👀 🦊Metamask will pop up! Confirm
 👉 And click on ‘view on etherscan’ in your terminal 
