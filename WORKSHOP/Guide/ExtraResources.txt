@@ -1,0 +1,55 @@
+Setup Guide of this workshop in Canva
+👉 https://bit.ly/3SClZMz
+❗ You have to do these steps first in order to follow the workshop!
+
+Where to learn Solidity / Smart contract development 
+👉 Crypto Zombies (www.cryptozombies.io)
+👉 Free Code Camp (Youtube - Solidity video's)
+👉 Dapp University (Youtube)
+👉 Clever Programmer (Youtub) - build clones. I worked here! You can find my Pinterest clone there :) 
+👉 Video's soon to be publised at my own channel :) - Jessy The Spiritual Coder (YouTube)
+👉 Naz Dumanskyy 
+
+To learn more about NFT's, watch these channels 
+👉 Whiteboard Crypto - What is a NFT? 📺 https://www.youtube.com/watch?v=4dkl5O9LOKg&t=115s
+👉 Johnny Harris - NFTs explained: 📺 https://www.youtube.com/watch?v=Oz9zw7-_vhM
+👉 Hashlips (NFT-art) - His channel https://www.youtube.com/c/HashLipsNFT
+
+Opensea
+👉 NFT Marketplace, minting place and interface to view NFT data on the blockchain
+🌐 www.opensea.io
+
+Remix IDE
+👉 local environment to create, manage and deploy contracts
+👉 also possible to use as tool to deploy on Goerli Testnet Network 
+🌐 www.remix-project.org 
+🚀 Click on Remix IDE to work
+
+Etherscan - you have different ones: 
+👉 for the Main network of Ethereum: https://etherscan.io/
+👉 for the Goerli Testnet Network: https://goerli.etherscan.io/
+
+Ethers.js 
+🚀 https://docs.ethers.io/v5/
+
+Pinata (Gatekeeper to IPFS)
+👉 www.pinata.cloud 
+
+IPFS (Decentralized storage)
+👉 www.ipfs.tech 
+
+Cool NFT MarketPlaces 
+👉 NFT Gamestop 
+👉 Rarible 
+👉 OpenSea 
+👉 Looksrare
+
+Cool NFT collection to check out on OpenSea 
+👉 Doodles 
+👉 Bored Yacht Ape Club 
+👉 Azuki 
+👉 Adidas in the Metaverse 
+
+
+
+
