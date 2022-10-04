@@ -10,7 +10,7 @@ import nftImage from "./assets/NFTImage.png";
 // Step 1: Run the app
 
 function App() {
-  const [inProgress, setInProgress] = useState();
+  const [inProgress, setInProgress] = useState(false);
   const [completed, setCompleted] = useState(false);
   const [account, setAccount] = useState();
   const [contract, setContract] = useState();
@@ -70,7 +70,7 @@ function App() {
                 <h4 className="information-subheader">
                   1st Frontmania NFT collection:
                 </h4>
-                <h1 className="information-header">Frontmaniacs </h1>
+                <h1 className="information-header">Frontmaniacs</h1>
               </div>
               <div className="information-interactions-container">
                 <p> 0 / 1000 minted </p>

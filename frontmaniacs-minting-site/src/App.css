@@ -128,7 +128,14 @@ body p {
 }
 
 .mint {
-  background-color: rgb(128, 0, 109);
+  background-color: yellow;
+  color: black;
+}
+
+.minted-complete {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .progress {
