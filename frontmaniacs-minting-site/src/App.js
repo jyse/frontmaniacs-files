@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import bgVideo from "./assets/backgroundVideo.mp4";
 import nftImage from "./assets/NFTImage.png";
 
+// Step 1: Run the app
+
 function App() {
   const [inProgress, setInProgress] = useState(false);
   const [completed, setCompleted] = useState(false);
@@ -16,9 +18,9 @@ function App() {
   const [hash, setHash] = useState();
 
   const mint = async () => {
-    // Step 4: Write the mint function
+    // Step 6: Write the mint function
     //
-    // Step 7: Set the variables for progress and completed
+    // Step 9: Set the variables for progress and completed
     // setInProgress(true)
     //  await transaction.wait()
     //  setInProgress(false)
@@ -26,27 +28,28 @@ function App() {
   };
 
   const getTotalSupply = async () => {
-    // Step 3: Add totalSupply and use it from the contract
+    // Step 5: Contract => getTotalSupply()
   };
 
-  // Step 3: Contract => getTotalSupply()
+  // Step 5: Contract => getTotalSupply()
 
   const login = async () => {
-    // Step 1: Connect wallet (check Metamask + accounts)
-    // Step 2: Wire up contract (provider, signer, NFTContract)
+    // Step 2: Connect wallet (check Metamask + accounts)
+    // Step 4: Wire up contract (provider, signer, NFTContract)
   };
 
   const getState = () => {
     if (inProgress) {
-      // Step 8: Pass in the transaction hash to InProgressMinting Component
+      // Step 10: Pass in the transaction hash to InProgressMinting Component and check this component
       return <InProgressMinting />;
     }
 
     if (completed) {
+      // Step 12: Check this component
       return <CompletedMinting />;
     }
 
-    // Step 6: Pass mint as props
+    // Step 8: Pass mint as props
     return <StartMinting />;
   };
 
@@ -71,7 +74,8 @@ function App() {
               </div>
               <div className="information-interactions-container">
                 <p> 0 / 1000 minted </p>
-                {/* // Step 5: insert getState() */}
+                {/* // Step 3: Render a mint button conditionally */}
+                {/* // Step 7: insert getState() */}
                 <div className="button">Connect Wallet</div>
               </div>
             </div>

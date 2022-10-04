@@ -68,7 +68,7 @@
 
 💠 Step 5: Add totalSupply and use it from the contract
 💻 Write useEffect with contract as dependency and getTotalSupply will fire of if the contract is true.
-💻 Write const totalSupply = await contract.totalSupply();
+💻 Write const totalSupply = await contract.totalSupply() in getTotalSupply();
 💻 Write setSupply(totalSupply.toNumber())
 💻 Write {supply} to your frontend → {supply} minted / 200
 
@@ -97,7 +97,7 @@
 - setCompleted(true)
 👀 go back to getState()
 
-💠 Step 10: Pass in the transaction hash to InProgressMinting Component
+💠 Step 10: // Step 10: Pass in the transaction hash to InProgressMinting Component and check this component
 👀 Checkout the InProgressMinting component
 👉 Pass the transaction hash as props, so the URL can be made up to look at this transaction in Etherscan
 💻 Write hash={hash} as props to the InProgressMinting Component 
