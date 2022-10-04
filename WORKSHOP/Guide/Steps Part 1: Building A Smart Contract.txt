@@ -90,7 +90,7 @@
 💻 Write payable keyword next to public in the function
 
 💠 Step 6a: The user should pay enough money!
-💻 Write require(msg.value >= ether, “more money needed”)
+💻 Write require(msg.value >= ether, 'more money needed')
 
 💠 Step 7: Ethereum Metric System
 👉 go to this site: https://eth-converter.com/
@@ -118,7 +118,7 @@
 🥳 Congratulations! You have minted your first NFT with ETH on a local blockchain!
 
 💠 Step 10: add the totalSupply function to the safeMint Function
-👉 require(totalSupply() >= maxSupply, “You have reached the limit”) 
+👉 require(totalSupply() <= maxSupply, 'You have reached the limit') 
 
 ❗🦊 In case you haven not installed Metamask yet, connected it to Goerli Testnet Network and have gotten an Alchemy account to get GoerliETH through www.goerlifaucet.com, 
 Do that first!! 🦊❗
